@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<strong>TỪ ĐIỂN ANH VIỆT</strong><br><br>
+<input id="english" type="text" placeholder="Từ muốn dịch">
+<input id="vietnam" type="text" placeholder="kết quả"><br><br>
+<input id="dich" type="button" value="Dịch" onclick="tuDien()">
+<script>
+    function tuDien(){
+        let arrs1 = ['dog','cat','pig','turtle'];
+        let arrs2 = ['chó','mèo', 'lợn','rùa'];
+        let str = document.getElementById('english').value;
+        let index = arrs1.indexOf(str);
+        if(index===-1){
+            document.getElementById('vietnam').value ='không tìm thấy'
+        }else {
+            document.getElementById('vietnam').value =arrs2[index];
+        }
+
+
+    }
+</script>
+</body>
+</html>
